@@ -1,0 +1,259 @@
+:root{
+    --a:0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.left{
+    width: 25vw;
+    padding: 10px;
+    height: 100vh;
+}
+.right{
+    width: 75vw;
+    height: 98vh;
+    position: relative;
+}
+.close{
+    display: none;
+}
+.mono{
+    gap: 8px;
+}
+.monoimg{
+    width: 44px;
+}
+.Home ul li{
+    list-style: none;
+    gap: 13px;
+    padding-top: 16px;
+}
+.heading{
+    gap: 13px;
+    align-items: center;
+    width: 100%;
+}
+
+.libary{
+    min-height: 78vh;
+    position: relative;
+}
+.footer{
+    position: absolute;
+    bottom: 5px;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+.footer div a{
+    text-decoration: none;
+    color: grey;
+    font-size: 13px;
+}
+.header{
+    justify-content: space-between;
+    background-color: rgb(34 ,34, 34);
+}
+.hamburger{
+    width: 34px;
+    height: 50px;
+    display: none;
+}
+.header >*{
+    padding: 20px;
+}
+.cardscontainer{
+    margin: 20px;
+    gap: 14px;
+    flex-wrap: wrap;
+    max-height: 65vh;
+    overflow-y: scroll;
+}
+.play{
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+    border: 2px solid rgba(255, 0, 0, 0);
+    border-radius: 120px;
+    background-color: rgb(19, 250, 19);
+    position: absolute;
+    top: 92px;
+    transition: all 0.9s;
+    right: 20px;
+    opacity: var(--a);
+    cursor: pointer;
+}
+.card{
+    width: 240px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 8px;
+    transition: all 0.5s;
+    background-color: #252525;
+}
+.card:hover{
+    background-color: #202020;
+    --a:1;
+}
+.card >*{
+    padding-top: 8px;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+}
+.button>*{
+    margin: 0 8px;
+}
+.signbtn{
+    border: none;
+    outline: none;
+    background-color: rgb(34 ,34, 34);
+    color: rgb(140, 137, 137);
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+.signbtn:hover{
+    font-size: 16px;
+    color: white;
+}
+.loginbtn{
+    border-radius: 19px;
+    width: 70px;
+    padding: 7px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all;
+    
+}
+.loginbtn:hover{
+    font-weight: bold;
+    transform: scale(1.1);
+}
+.playbar{
+    position: fixed;
+    background-color: rgb(60, 58, 58);
+    width: 75vw;
+    height: 70px;
+    padding: 20px;
+    bottom: 0;
+    margin: 0px 2px;
+}
+.songbtn{
+    height: 30px;
+    gap: 20px;
+}
+.songsname{
+    max-height: 68vh;
+    overflow-y: scroll;
+}
+.songsname ul{
+    padding-top: 10px;
+}
+.songsname ul li{
+    list-style-type: decimal;
+    font-size: 20px;
+    padding: 10px;
+    justify-content: space-between;
+    gap: 20px;
+    
+    cursor: pointer;
+    background-color: #181818;
+    
+}
+.name{
+    width: 250px;
+}
+.songsname ul li:hover{
+    background-color: #252525;
+}
+.songsname ul li img{
+    width: 34px;
+}
+.seekbar{
+    width: 96.5%;
+    position: absolute;
+    bottom: 2px;
+
+    height: 5px;
+    margin: 4px;
+    background-color: aliceblue;
+}
+.circle{
+    width: 19px;
+    height: 19px;
+    border-radius: 13px;
+    background-color: white;
+    position: relative;
+    bottom: 8px;
+    left: 0%;
+    transition: left 0.5s;
+}
+.songinfo{
+    font-size: 20px;
+}
+.upperwala{
+    justify-content: space-between;
+}
+
+@media (max-width : 1400px) {
+    .left{
+        position: absolute;
+        left: -140%;
+        transition: all 1s;
+        padding: 0;
+        z-index: 1;
+        width: 388px;
+        background-color: black;
+    }
+    .close{
+        position: absolute;
+        display: block;
+        top: 27px;
+        right: 27px;
+        font-weight: bold;
+    }
+    .right{
+        width: 100vw;
+    }
+    .header{
+        margin: 0;
+    }
+    .hamburger{
+        display: block;
+    }
+    .upperwala{
+        margin: -8px 0px;
+    }
+    .playbar{
+        width: 98vw;
+    }
+    .songinfo{
+        font-size: 17px;
+    }
+    .seekbar{
+        width: 92%;
+    }
+    .cardscontainer{
+    justify-content: center;
+    }
+    .card{
+        width: 90vw;
+        margin: 0;
+    }
+    .vol{
+        display: none;
+    }
+
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/UtilityClass.css">
+    <link rel="stylesheet" href="css/SpotifyStyle.css">
+    <title>Spotify</title>
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left border bg-black">
+            <div class="close">
+                <h1>X</h1>
+            </div>
+            <div class="Home bg-grey rounded m-1 p-1">
+                <ul><div class="mono flex cursor">
+                    <img class="monoimg" src="spotify-download-logo-30.png" alt="">
+                    <h1>Spotify</h1>
+                </div>
+                    <li class="flex">
+                        <img class="invert svg-width cursor" src="img/home-2-fill.svg" alt="Home"><span
+                            class="cursor">Home</span>
+                    </li>
+                    <li class="flex">
+                        <img class="invert svg-width cursor" src="img/Search.svg" alt="Search"><span
+                            class="cursor">Search</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="libary bg-grey rounded m-1 p-1">
+                <div class="heading flex">
+                    <img class="invert svg-width" src="img/bx-list-ul.svg" alt="Badge">
+                    <h2>Your libary</h2>
+                </div>
+                <div class="songsname">
+                    <ul>
+                        <!-- <li class="border flex rounded m-1 p-1">
+                            <img class="invert" src="verified-badge-line.svg" alt="">
+                            <div class="name">
+                                <div>Song Name</div>
+                                <div>Author Name</div>
+                            </div>
+                            <img class="invert" src="heart-line.svg" alt="">
+                            <img class="invert" src="img/bx-play-circle.svg" alt="">
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="footer flex bg-grey rounded m-1">
+                    <div><a href="#"><span>Legal</span></a></div>
+                    <div><a href="#"><span>Contact Us</span></a></div>
+                    <div><a href="#"><span>Follow Us</span></a></div>
+                    <div><a href="#"><span>Go To Hell</span></a></div>
+                    <div><a href="#"><span>Address</span></a></div>
+                    <div><a href="#"><span>Rate Us</span></a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right border bg-grey rounded tm-1">
+            <div class="header flex rounded m-1">
+                <div class="nav">
+                    <div class="burger flex justify-content align-item g-1">
+
+                        <img class="invert hamburger" src="img/bx-menu.svg" alt="">
+                        <img class="invert svg-width right90" src="img/arrow-down-s-line.svg" alt="">
+                        <img class="invert svg-width left90" src="img/arrow-down-s-line.svg" alt="">
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="signbtn">Sign Up</button>
+                    <button class="loginbtn">Log in</button>
+                </div>
+            </div>
+            <div class="playlist rounded p-1">
+                <h2>Spotify playlist</h2>
+                <div class="cardscontainer flex">
+                    
+                    
+                </div>
+            </div>
+            <div class="playbar">
+                <div class="seekbar rounded cursor">
+                    <div class="circle"></div>
+                </div>
+                <div class="upperwala flex">
+                    <div class="songinfo" style="width: 200px;"></div>
+                    <div class="songbtn flex justify-content">
+                        <img class="invert cursor" id="previous" src="img/bx-chevrons-left.svg" alt="Left">
+                        <img class="invert cursor" id="play" src="img/bx-play-circle.svg" alt="play">
+                        <img class="invert cursor" id="next" src="img/bx-chevrons-right.svg" alt="right">
+                    </div>
+                    <div class="timevol flex g-1 justify-content align-item">                        
+                        <div class="songtime" style="width: 90px;"></div>
+                        <div class="vol flex"><img id="bxvol" class="invert svg-width cursor" src="img/bx-volume-full.svg" alt="">
+                        <input class="cursor invert" type="range"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/SpotifyScript.js"></script>
+</body>
+
+</html>
