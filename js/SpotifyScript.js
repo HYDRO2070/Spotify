@@ -1,5 +1,4 @@
 console.log("Hello My Script Is Working Or Not....");
-console.log("Hello My Script Is Working Or Not....");
 let audio = new Audio();
 let currFolder;
 let SongUL
