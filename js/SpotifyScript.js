@@ -15,6 +15,7 @@ function SectoMin(sec){
     return `${formatemin}:${formatesec}`;
 }
 async function getSongs(folder){
+    currFolder = folder;
     let songs = await fetch(`${currFolder}/`);
     let a = await songs.text();
     let div = document.createElement("div");
