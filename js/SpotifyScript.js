@@ -14,7 +14,7 @@ function SectoMin(sec){
     return `${formatemin}:${formatesec}`;
 }
 async function getSongs(folder){
-    let songs = await fetch(`http://127.0.0.1:5500/${currFolder}/`);
+    let songs = await fetch(`${currFolder}/`);
     let a = await songs.text();
     let div = document.createElement("div");
     div.innerHTML = a;
@@ -59,7 +59,7 @@ async function getSongs(folder){
 }
 
 async function getcarddetail(){
-    let request = await fetch("http://127.0.0.1:5500/Songs/");
+    let request = await fetch("Songs/");
     let response = await request.text();
     let div = document.createElement("div");
     div.innerHTML = response;
