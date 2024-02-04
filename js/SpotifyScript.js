@@ -1,7 +1,7 @@
 console.log("Hello My Script Is Working Or Not....");
 let audio = new Audio();
 let currFolder;
-let SongUL
+let SongUL;
 let song;
 function SectoMin(sec){
     if(isNaN(sec) || sec<0){
@@ -13,7 +13,7 @@ function SectoMin(sec){
     const formatesec = String(remsec).padStart(2,'0');
     return `${formatemin}:${formatesec}`;
 }
-async function getSongs(folder){
+async function getSongs(folder) {
     currFolder = folder;
     let songs = await fetch(`${currFolder}/`);
     let a = await songs.text();
@@ -32,7 +32,6 @@ async function getSongs(folder){
         }
     }
     song = oooo;
-    console.log(song[0])
     playMusic(song[0],true);
     
     SongUL = document.querySelector(".songsname").getElementsByTagName("ul")[0];
@@ -70,7 +69,8 @@ async function getcarddetail(){
     for (let index = 0; index < array.length; index++) {
         const e = array[index];
         if(e.href.includes("/Songs/")){
-            let folder = e.href.split("/").slice(-1)[0];
+            let folder = e.href.split("/").slice(-2)[0];
+            console.log(folder);
             let a = await fetch(`Songs/${folder}/info.json`);
             let response = await a.json();
             cardcontainer.innerHTML = cardcontainer.innerHTML +`<div data-folder="${folder}" class="card m-1 p-1">
@@ -104,7 +104,7 @@ const playMusic = (track,pause=false)=>{
         play.src = "img/bx-pause-circle.svg";
     }
 
-    document.querySelector(".songinfo").innerHTML=track;
+    document.querySelector(".songinfo").innerHTML=track.replaceAll("%20"," ");
     document.querySelector(".songtime").innerHTML="00:00/00:00";
 }
 async function main(){
